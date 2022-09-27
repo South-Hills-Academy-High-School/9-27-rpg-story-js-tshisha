@@ -85,7 +85,7 @@ function finalChoice() {
     blockObject.setAnyProperty(FinalChoice1, AnyProp.NextPage, FinalChoice2)
     blockObject.setStringArrayProperty(FinalChoice2, StrArrayProp.Choices, ["Please!", "BUZZ OFF!!!!"])
     blockObject.setAnyProperty(FinalChoice2, AnyProp.Choice1, happyEnding())
-    blockObject.setAnyProperty(FinalChoice2, AnyProp.Choice2, 0)
+    blockObject.setAnyProperty(FinalChoice2, AnyProp.Choice2,sadending())
     return FinalChoice1
 }
 function happyEnding() {
@@ -97,19 +97,18 @@ function happyEnding() {
     blockObject.setAnyProperty(happy2, AnyProp.NextPage, happy3)
     blockObject.setAnyProperty(happy3, AnyProp.NextPage, happy4)
     return happy1
-}
-controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (choiceIndex == 1) {
-        choiceIndex = 0
+    function sadending() {
+   let sadending1: blockObject. BlockObject = null
+    let sadending2: blockObject.BlockObject = null
         updateChoices()
-    }
-})
-controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
+        sadending1 = createScript("Mr, Kao", "I will go to the restroom now,BEY!!!", 2)
+    sadending2 = createScript("Pineapple", "Don't leave me ! My boss will like me!!! ;(", 2)
+blockObject,setAnyProperty(sadending1, AnyProp,NextPage)
     if (choiceIndex == 0) {
         choiceIndex = 1
         updateChoices()
     }
-})
+    choice1
 function updateChoices() {
     if (choiceIndex == 0) {
         choice1.setOutline(1, 10)
