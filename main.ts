@@ -97,18 +97,25 @@ function happyEnding() {
     blockObject.setAnyProperty(happy2, AnyProp.NextPage, happy3)
     blockObject.setAnyProperty(happy3, AnyProp.NextPage, happy4)
     return happy1
-    function sadending() {
-   let sadending1: blockObject. BlockObject = null
-    let sadending2: blockObject.BlockObject = null
-        updateChoices()
+}
+let suprehappy1:blockObject.BlockObject = null
+let suprehappy2: blockObject.BlockObject = null
+function suprehappyEnding() {
+    suprehappy1 = createScript("Mr. Kao","yes,superhappyend",1)
+    suprehappy2 = createScript("pineappel","yeah!!!",3)
+    blockObject.setAnyProperty(suprehappy1, AnyProp.NextPage, suprehappy2)
+    return suprehappy1
+}
+
+   let sadending1: blockObject.BlockObject = null
+   let sadending2: blockObject.BlockObject = null
+    function sadending(){
         sadending1 = createScript("Mr, Kao", "I will go to the restroom now,BEY!!!", 2)
-    sadending2 = createScript("Pineapple", "Don't leave me ! My boss will like me!!! ;(", 2)
-blockObject,setAnyProperty(sadending1, AnyProp,NextPage)
-    if (choiceIndex == 0) {
-        choiceIndex = 1
-        updateChoices()
+        sadending2 = createScript("Pineapple", "Don't leave me ! My boss will like me!!! ;(", 2)
+        blockObject. setAnyProperty(sadending1, AnyProp.NextPage, sadending2)
+    return sadending1
     }
-    choice1
+    
 function updateChoices() {
     if (choiceIndex == 0) {
         choice1.setOutline(1, 10)
